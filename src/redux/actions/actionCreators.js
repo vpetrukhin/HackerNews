@@ -1,11 +1,6 @@
 import { HACKER_NEWS_API_BASE_URL } from "../../utils/constance";
 import { FETCH_NEWS, SHOW_LOADER, HIDE_LOADER } from "./types";
 
-// export const fetchNewsAction = news => ({
-//   type: FETCH_NEWS,
-//   payload: news,
-// });
-
 export const fetchNews = () => {
   return (dispatch) => {
     const newsPayload = [];

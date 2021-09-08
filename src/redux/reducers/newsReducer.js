@@ -13,6 +13,7 @@ const newsReducer = (state = initialNewsState, action) => {
       return {...state, isLoading: true};
     case HIDE_LOADER:
       return {...state, isLoading: false};
+    case 
     default:
       return state;
   }
