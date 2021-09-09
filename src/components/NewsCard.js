@@ -9,10 +9,10 @@ const NewsCard = ({ card }) => {
   
   return (
     <Card className="w-100 h-100">
-      <Link to={`/news/${id}`}>
+      <Link style={{ textDecoration: 'none', color: 'inherit' }} to={`/news/${id}`}>
         <Card.Header>
           <Card.Title>{title}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">{score}</Card.Subtitle>
+          <Card.Subtitle className="mb-2 text-muted">Рейтинг: {score}</Card.Subtitle>
         </Card.Header>
         <Card.Body>
           <Card.Text>{by}</Card.Text>

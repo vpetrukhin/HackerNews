@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 
-const Header = () => {
-  
+const Header = ({ updateHandler }) => {
   return (
     <>
       <Row className="pt-3 bg-dark">
@@ -12,10 +11,10 @@ const Header = () => {
       </Row>
       <Row className="pb-3 bg-dark">
         <Col>
-          <Button>Обновить</Button>
+          <Button className="w-100" onClick={updateHandler}>Обновить</Button>
         </Col>
       </Row>
     </>
   );
-}
+};
 export default Header;
