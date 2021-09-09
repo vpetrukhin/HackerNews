@@ -1,14 +1,11 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { getDateFromUnixTime } from '../utils/utils';
 
 const NewsCard = ({ card }) => {
   const { title, score, by, time, id} = card;
 
-  const getDateFromUnixTime = time => {
-    const date = new Date(time * 1000);
-    return `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`
-  };
   
   return (
     <Card className="w-100 h-100">

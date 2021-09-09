@@ -18,13 +18,15 @@ const Main = ({ newsList }) => {
         ) : (
           <Row xs={1} md={2} lg={3}>
             {newsList.map((item) => {
-              return (
-                <Col>
-                  <ListGroup.Item className="m-2 h-100">
-                    <NewsCard card={item} key={item.id.toString()} />
-                  </ListGroup.Item>
-                </Col>
-              );
+              if (item) {
+                return (
+                  <Col>
+                    <ListGroup.Item className="m-2 h-100">
+                      <NewsCard card={item} key={item.id.toString()} />
+                    </ListGroup.Item>
+                  </Col>
+                );
+              };
             })}
           </Row>
         )}
